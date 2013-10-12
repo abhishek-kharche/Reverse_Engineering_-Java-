@@ -1,15 +1,15 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//              ______                                                 _____     _______     ______              //
-//             /      |         /\      \            /     /\         |     \   |       \   /      \             //
-//                    |        /  \      \          /     /  \        |      \  |          |                     //
-//                    |       /    \      \        /     /    \       |      /  |          |                     //
-//                    |      /______\      \      /     /______\      |_____/   |----|     |                     //
-//                    |     /        \      \    /     /        \     |         |          |      __             //
-//             \      |    /          \      \  /     /          \    |         |          |        |            //
-//              \____/    /            \      \/     /            \   |         |_______/   \______/             //
-//	  				   															 								                                                   //
-//																			                                              BY- Abhishek Kharche			 //
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+******************************************************************************************************************
+              ______                                                 _____     _______     ______              
+             /      |         /\      \            /     /\         |     \   |       \   /      \             
+                    |        /  \      \          /     /  \        |      \  |          |                     
+                    |       /    \      \        /     /    \       |      /  |          |                     
+                    |      /______\      \      /     /______\      |_____/   |----|     |                     
+                    |     /        \      \    /     /        \     |         |          |      __             
+             \      |    /          \      \  /     /          \    |         |          |        |            
+              \____/    /            \      \/     /            \   |         |_______/   \______/             
+						 								                                                    
+						                                    BY- Abhishek Kharche         
+******************************************************************************************************************
 
 
 This project is performed in Software Design class as an individual project in University of Delaware. The Project
@@ -21,7 +21,7 @@ explorer. This project use inbuilt Java Swing and AWT packages.
 
 Note:- Project was mainly about Reverse Engineering (UML Diagrams are not included)
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+******************************************************************************************************************
 
 FILES IN THE BUCKET:-
 
@@ -32,7 +32,7 @@ JavaPEG Code - Contains the snapshot of project implementation
 
 (To see the complete Difference Report, Go To http://diffchecker.com/4j0xmcad)
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+******************************************************************************************************************
 
 EXPLANATION:-
 
@@ -72,11 +72,11 @@ Finally add all these buttons to the SOUTH side of BorderLayout (inbuilt package
 		int columns = thumbNailsPanel.getVisibleRect().width ;   // To get width of visible portion of Panel
 		columns = (int)Math.floor( columns/100.0 );
 		if(selectLayout == 6)
-			columns = columns;									 // Default option 
+			columns = columns;	 // Default option 
 		else if(selectLayout == 3)	
-			columns = columns/2;							   	 // For small icons
+			columns = columns/2;	 // For small icons
 		else 
-			columns = 1;										 // For list
+			columns = 1;		 // For list
 		int width = (thumbNailsPanel.getVisibleRect().width - 22) / columns;
 
   And add the thumbNail using thumbNailsPanel.add(thumbNail, c); where c is GridBagConstraints
@@ -89,9 +89,9 @@ Finally add all these buttons to the SOUTH side of BorderLayout (inbuilt package
 		loadThumbNails(new File(completePath));
 	thumbNailsPanel.invalidate();
 	thumbNailsPanel.repaint();
-	thumbNailsPanel.updateUI();									// This will create new thumbNail for each image.
+	thumbNailsPanel.updateUI();		// This will create new thumbNail for each image.
 
 Note:- Some of boundary conditions such as x and y axis co-ordinates are hard coded for SIMPLICITY.
 
-//////////////////////////////////////////////// THANK YOU ////////////////////////////////////////////////////////	
+---------------------------------------------------- THANK YOU ---------------------------------------------------------	
 
