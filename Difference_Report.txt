@@ -1,0 +1,104 @@
+											----DIFFERENCE REPORT-----
+					  This file contains only the changes I made to the original source code
+					  
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+							|
+							|
+							|
+thumbNailGridLayout = new GridLayout(0,2);
+GridBagLayout temp = new GridBagLayout();
+							|
+							|
+		final JPanel compsToExperiment = new JPanel();
+		compsToExperiment.setLayout(new GridLayout(1,3));
+		JButton button1 = new JButton("Large Thumbnails");
+		final MainGUI temp = this;
+		//Add action listener to button
+		button1.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e)
+			{
+				//Execute when button is pressed
+				//System.out.println("You clicked the button");
+				selectLayout = 3;
+				if(completePath!=null)
+					loadThumbNails(new File(completePath));
+				thumbNailsPanel.invalidate();
+				thumbNailsPanel.repaint();
+				thumbNailsPanel.updateUI();
+			}
+		});
+		JButton button2 = new JButton("Small Thumbnails");
+		//Add action listener to button
+		button2.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e)
+			{
+				//Execute when button is pressed
+				//System.out.println("You clicked the button");
+				selectLayout = 6;
+				if(completePath!=null)
+					loadThumbNails(new File(completePath));
+				thumbNailsPanel.invalidate();
+				thumbNailsPanel.repaint();
+				thumbNailsPanel.updateUI();				
+			}
+		});
+
+		JButton button3 = new JButton("List");
+		//Add action listener to button
+		button3.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e)
+			{
+				//Execute when button is pressed
+				//System.out.println("You clicked the button");
+				selectLayout = 1;
+				if(completePath!=null)
+					loadThumbNails(new File(completePath));
+				thumbNailsPanel.invalidate();
+				thumbNailsPanel.repaint();
+				thumbNailsPanel.updateUI();
+			}
+		});
+		compsToExperiment.add(button1);
+		compsToExperiment.add(button2);
+		compsToExperiment.add(button3);
+		thumbNailsBackgroundsPanel.add(compsToExperiment,BorderLayout.SOUTH);
+						|
+						|
+// NEW METHOD
+		private void addThumbnail(JButton thumbNail, int items) {
+		/*if(selectLayout==1)
+			thumbNail.setAlignmentX(Component.LEFT_ALIGNMENT);
+		else if(selectLayout==2)
+			thumbNail.setAlignmentX(Component.RIGHT_ALIGNMENT);*/
+		int columns = thumbNailsPanel.getVisibleRect().width ;
+		columns = (int)Math.floor( columns/100.0 );
+		if(selectLayout == 6)
+			columns = columns;
+		else if(selectLayout == 3)
+			columns = columns/2;
+		else 
+			columns = 1;
+		int width = (thumbNailsPanel.getVisibleRect().width - 22) / columns;
+		GridBagConstraints c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.weightx = 1.0;
+		c.weighty = 1.0;
+		c.gridx = items%columns;
+		
+		int height = selectLayout==1?22:width;
+		
+		thumbNail.setPreferredSize(new Dimension(width, height));
+		thumbNailsPanel.add(thumbNail, c);
+	}
+						|
+						|
+if(completePath!=null)
+ 	loadThumbNails(new File(completePath));
+thumbNailsPanel.invalidate();
+thumbNailsPanel.repaint();
+thumbNailsPanel.updateUI();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
