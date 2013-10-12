@@ -47,8 +47,8 @@ EXPLANATION:-
 	Component is an object used for graphical representation. It can provide GUI with 
 	buttons, checkboxes, scrollbars & interact with user. Insets are used for border 
 	representations of the containers (It can place the window on four sides; top, 
-	bottom, right or left). Finally boxlayout allows multiple components to be laid out
-	either vertically or horizontally.
+	bottom, right or left). Finally boxlayout allows multiple components to be laid 
+	out either vertically or horizontally.
 
 * I initialized a variable selectLayout so that user can select the layout of his choice. 
   There were 3 layouts provided in the extension and the default one was with Large Icons 
@@ -96,7 +96,7 @@ Finally add all these buttons to the SOUTH side of BorderLayout (inbuilt package
 		loadThumbNails(new File(completePath));
 	thumbNailsPanel.invalidate();
 	thumbNailsPanel.repaint();
-	thumbNailsPanel.updateUI();		// This will create new thumbNail for each image.
+	thumbNailsPanel.updateUI(); // This will create new thumbNail for each image.
 
 Note:- Some of boundary conditions such as x and y axis co-ordinates are hard coded for 
        SIMPLICITY.
