@@ -1,14 +1,14 @@
-											----DIFFERENCE REPORT-----
-					  This file contains only the changes I made to the original source code
+						----DIFFERENCE REPORT-----
+			This file contains only the changes I made to the original source code
 					  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-							|
-							|
-							|
+			|
+			|
+			|
 thumbNailGridLayout = new GridLayout(0,2);
 GridBagLayout temp = new GridBagLayout();
-							|
-							|
+				|
+				|
 		final JPanel compsToExperiment = new JPanel();
 		compsToExperiment.setLayout(new GridLayout(1,3));
 		JButton button1 = new JButton("Large Thumbnails");
